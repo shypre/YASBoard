@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+#include "videoplayer.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -16,17 +18,15 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_actionQuit_triggered();
-
-    void on_actionAbout_triggered();
-
-    void on_actionMeme_1_triggered();
-
-    void on_actionMeme_2_triggered();
-
-    void on_actionPlay_File_triggered();
+    void on_actionResize_triggered();
 
 private:
     Ui::MainWindow *ui;
+
+    VideoPlayer *player;
+    VideoPlayer *player2;
+
+    void setupUI();
+    void resizeEvent(QResizeEvent*);
 };
 #endif // MAINWINDOW_H
