@@ -42,9 +42,16 @@
     <addaction name="actionMeme_1"/>
     <addaction name="actionMeme_2"/>
    </widget>
+   <widget class="QMenu" name="menuOther">
+    <property name="title">
+     <string>Other</string>
+    </property>
+    <addaction name="actionPlay_File"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuAbout"/>
    <addaction name="menuPlay"/>
+   <addaction name="menuOther"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionQuit">
@@ -65,6 +72,11 @@
   <action name="actionMeme_2">
    <property name="text">
     <string>Meme 2</string>
+   </property>
+  </action>
+  <action name="actionPlay_File">
+   <property name="text">
+    <string>Play File</string>
    </property>
   </action>
  </widget>

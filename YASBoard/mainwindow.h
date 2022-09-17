@@ -24,6 +24,8 @@ private slots:
 
     void on_actionMeme_2_triggered();
 
+    void on_actionPlay_File_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

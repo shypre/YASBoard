@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <QCoreApplication>
 #include <QMediaPlayer>
+#include <QFileDialog>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -42,5 +43,16 @@ void MainWindow::on_actionMeme_1_triggered()
 void MainWindow::on_actionMeme_2_triggered()
 {
 
+}
+
+
+void MainWindow::on_actionPlay_File_triggered()
+{
+    QString filename = QFileDialog::getOpenFileName(this, "Choose audio file to play");
+
+    auto player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile(filename));
+    player->setVolume(100);
+    player->play();
 }
 
